@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tasky-app
+  labels:
+    app: tasky-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tasky-app
+  template:
+    metadata:
+      labels:
+        app: tasky-app
+    spec:
+      serviceAccountName: tasky-admin-sa
+      containers:
+      - name: tasky-app
+        image: ghcr.io/kmt0297/tasky-main:latest
+        ports:
+        - containerPort: 8080
+        env:
+        - name: MONGODB_URI
+          value: "mongodb://wizadmin:wizadminpass!@13.91.128.206:27017/go-mongodb"
+        - name: SECRET_KEY
+          value: "your-secret-key"

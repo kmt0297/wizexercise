@@ -16,3 +16,6 @@ EXPOSE 8080
 ENTRYPOINT ["/app/tasky"]
 
 
+#Copy wizexercise.txt file to the container in that path
+COPY wizexercise.txt /wizexercise.txt
+
