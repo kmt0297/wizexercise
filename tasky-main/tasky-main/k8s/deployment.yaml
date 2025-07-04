@@ -24,4 +24,7 @@ spec:
         - name: MONGODB_URI
           value: "mongodb://wizadmin:wizadminpass!@13.91.128.206:27017/go-mongodb"
         - name: SECRET_KEY
-          value: "your-secret-key"
+          value: c955027a-5600-4c43-bfc6-90cc8f514f4040342f79-574f-4cf7-b25d-980a16b23f0f
+      imagePullSecrets:
+        - name: ghcr.io   
+
