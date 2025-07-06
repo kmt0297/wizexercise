@@ -10,8 +10,8 @@ on:
     branches: ['main']
 
 env:
-  REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
+  REGISTRY: ghcr.io 
+  IMAGE_NAME: kmt0297/tasky-main 
 
 jobs:
   build-and-push-image:
