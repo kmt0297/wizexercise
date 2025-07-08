@@ -12,10 +12,10 @@ FROM alpine:3.17.0 as release
 WORKDIR /app
 COPY --from=build  /go/src/tasky/tasky .
 COPY --from=build  /go/src/tasky/assets ./assets
-EXPOSE 8080
-ENTRYPOINT ["/app/tasky"]
-
 
 #Copy wizexercise.txt file to the container in that path
 COPY wizexercise.txt /wizexercise.txt
+
+EXPOSE 8080
+ENTRYPOINT ["/app/tasky"]
 
