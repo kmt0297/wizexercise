@@ -44,7 +44,7 @@ jobs:
           registry: ${{ env.REGISTRY }}
           tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
           context: ./tasky-main/tasky-main
-          file: Dockerfile
+          #file: Dockerfile
 
 
 # jobs:
